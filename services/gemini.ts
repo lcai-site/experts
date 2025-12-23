@@ -1,11 +1,18 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
 
-// Initialize with the exact structure required by the guidelines
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Inicialização segura: A API Key é injetada pelo ambiente
+const getAI = () => {
+  const apiKey = process.env.API_KEY;
+  if (!apiKey) {
+    console.warn("API_KEY não encontrada no process.env. Verifique as configurações de ambiente.");
+  }
+  return new GoogleGenAI({ apiKey: apiKey || "" });
+};
 
 export const getDigitalDiagnostic = async (niche: string, audienceSize: string, currentStatus: string) => {
   try {
+    const ai = getAI();
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: `Com base nas seguintes informações de um Expert:
@@ -29,7 +36,6 @@ export const getDigitalDiagnostic = async (niche: string, audienceSize: string, 
       }
     });
 
-    // Access the .text property directly and handle potential undefined values
     const jsonStr = response.text?.trim() || "{}";
     return JSON.parse(jsonStr);
   } catch (error) {
