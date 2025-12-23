@@ -23,12 +23,17 @@ const Hero: React.FC = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <a href="#ai-diagnostic" className="w-full sm:w-auto px-10 py-5 bg-blue-600 hover:bg-blue-700 text-lg font-bold rounded-2xl shadow-xl shadow-blue-900/20 transition-all hover:-translate-y-1 text-center">
-            Diagnóstico de Operação
+          <a href="#ai-diagnostic" className="w-full sm:w-auto px-10 py-5 glass text-lg font-bold rounded-2xl transition-all hover:bg-slate-800 text-center text-white">
+            Preencher Diagnóstico
           </a>
-          <button className="w-full sm:w-auto px-10 py-5 glass text-lg font-bold rounded-2xl transition-all hover:bg-slate-800">
-            Conhecer Metodologia 360°
-          </button>
+          <a 
+            href="https://wa.me/5519999611441" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto px-10 py-5 bg-blue-600 hover:bg-blue-700 text-lg font-bold rounded-2xl shadow-xl shadow-blue-900/20 transition-all hover:-translate-y-1 text-center text-white"
+          >
+            Falar com Estrategista
+          </a>
         </div>
 
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-50 grayscale hover:grayscale-0 transition-all items-center">

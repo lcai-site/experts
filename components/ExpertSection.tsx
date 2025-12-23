@@ -13,7 +13,7 @@ const ExpertSection: React.FC = () => {
         <div className="space-y-4">
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center flex-shrink-0">
-              ⚡
+              <span className="text-xl">⚡</span>
             </div>
             <div>
               <h4 className="font-bold text-white">Arquitetura de Esteira</h4>
@@ -22,7 +22,7 @@ const ExpertSection: React.FC = () => {
           </div>
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center flex-shrink-0">
-              🖋️
+              <span className="text-xl">🖋️</span>
             </div>
             <div>
               <h4 className="font-bold text-white">Copywriting Estratégico</h4>
@@ -31,7 +31,7 @@ const ExpertSection: React.FC = () => {
           </div>
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center flex-shrink-0">
-              🛠️
+              <span className="text-xl">🛠️</span>
             </div>
             <div>
               <h4 className="font-bold text-white">Infraestrutura Low-Cost</h4>
@@ -40,9 +40,14 @@ const ExpertSection: React.FC = () => {
           </div>
         </div>
 
-        <button className="bg-white text-slate-950 px-8 py-4 rounded-2xl font-bold hover:bg-blue-500 hover:text-white transition-all shadow-lg shadow-white/5">
+        <a 
+          href="https://wa.me/5519999611441" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="bg-white text-slate-950 px-8 py-4 rounded-2xl font-bold hover:bg-blue-500 hover:text-white transition-all shadow-lg shadow-white/5 inline-block text-center"
+        >
           Quero ser o próximo Case
-        </button>
+        </a>
       </div>
 
       <div className="flex-1 relative">
