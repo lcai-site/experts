@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { getDigitalDiagnostic } from '../services/gemini';
-import { DiagnosticResult } from '../types';
+import { getDigitalDiagnostic } from '../services/gemini.ts';
+import { DiagnosticResult } from '../types.ts';
 
 const AIDiagnostic: React.FC = () => {
   const [niche, setNiche] = useState('');

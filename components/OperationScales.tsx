@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { OperationalScale } from '../types';
+import { OperationalScale } from '../types.ts';
 
 const scales: OperationalScale[] = [
   {

@@ -1,12 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Stats from './components/Stats';
-import OperationScales from './components/OperationScales';
-import ExpertSection from './components/ExpertSection';
-import AIDiagnostic from './components/AIDiagnostic';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar.tsx';
+import Hero from './components/Hero.tsx';
+import Stats from './components/Stats.tsx';
+import OperationScales from './components/OperationScales.tsx';
+import ExpertSection from './components/ExpertSection.tsx';
+import AIDiagnostic from './components/AIDiagnostic.tsx';
+import Footer from './components/Footer.tsx';
 
 const App: React.FC = () => {
   return (
