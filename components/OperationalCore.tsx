@@ -22,8 +22,8 @@ const coreServices = [
   },
   {
     title: "E-mail Marketing",
-    tag: "Custo-Benefício",
-    description: "Infraestrutura própria que reduz seus custos fixos em até 70%, mantendo entregabilidade máxima nas caixas de entrada.",
+    tag: "Decisão & Custo",
+    description: "Arquitetura otimizada que reduz seus custos fixos em até 70%, gerando informações de qualidade para sua tomada de decisão e escala.",
     icon: "📧"
   },
   {
@@ -35,7 +35,7 @@ const coreServices = [
   {
     title: "Gestão de Comunidades",
     tag: "Retenção",
-    description: "Moderação e infraestrutura para áreas de membros e grupos, garantindo que o expert foque apenas em entregar conteúdo.",
+    description: "Moderação e suporte estratégico para áreas de membros e grupos, garantindo que o expert foque apenas em entregar conteúdo.",
     icon: "🤝"
   }
 ];
@@ -46,7 +46,7 @@ const OperationalCore: React.FC = () => {
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Engenharia de Vendas Completa</h2>
         <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-          Unimos estratégia de produto, copy persuasiva e tecnologia de baixo custo para criar operações de <span className="text-blue-400 font-bold">Alta Performance.</span>
+          Unimos estratégia de produto, copy persuasiva e inteligência operacional para criar operações de <span className="text-blue-400 font-bold">Alta Performance e Baixo Custo.</span>
         </p>
       </div>
       

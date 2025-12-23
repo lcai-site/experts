@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
         </h1>
         
         <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-14 leading-relaxed font-medium">
-          Cuidamos de 100% da sua infraestrutura: do desenvolvimento da <strong className="text-slate-200">esteira de produtos</strong> e <strong className="text-slate-200">copywriting</strong> de elite até a gestão técnica com o menor custo operacional do mercado.
+          Otimizamos 100% da sua operação: do desenvolvimento da <strong className="text-slate-200">esteira de produtos</strong> e <strong className="text-slate-200">copywriting</strong> de elite até a gestão estratégica com foco em <strong className="text-slate-200">redução de custos</strong> e dados para tomada de decisão.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
           <div className="text-[10px] font-black tracking-[0.3em] text-slate-400 uppercase">Copywriting Elite</div>
           <div className="text-[10px] font-black tracking-[0.3em] text-slate-400 uppercase">Esteira de LTV</div>
           <div className="text-[10px] font-black tracking-[0.3em] text-slate-400 uppercase">Low & High Ticket</div>
-          <div className="text-[10px] font-black tracking-[0.3em] text-slate-400 uppercase">Infra Própria</div>
+          <div className="text-[10px] font-black tracking-[0.3em] text-slate-400 uppercase">Inteligência de Dados</div>
         </div>
       </div>
     </div>

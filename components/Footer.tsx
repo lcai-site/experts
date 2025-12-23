@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
               />
             </div>
             <p className="text-slate-400 max-w-sm mb-8 leading-relaxed">
-              Especialistas em operações digitais de alta escala. Transformamos expertise em ativos de alto rendimento com tecnologia própria e copy de elite.
+              Especialistas em operações digitais de alta escala. Transformamos expertise em ativos de alto rendimento com inteligência operacional e copy de elite.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-blue-600 transition-colors">

@@ -15,8 +15,8 @@ const Stats: React.FC = () => {
   return (
     <div className="grid md:grid-cols-2 gap-12 items-center">
       <div className="space-y-8">
-        <h2 className="text-4xl font-bold leading-tight">Menos gasto com infraestrutura, mais lucro no seu bolso.</h2>
-        <p className="text-slate-400">Enquanto outras operações incham os custos com softwares caros, a LCAI foca em ferramentas de alta performance e baixo custo fixo.</p>
+        <h2 className="text-4xl font-bold leading-tight">Menos gasto operacional, informações de qualidade para lucrar mais.</h2>
+        <p className="text-slate-400">Enquanto outras operações incham os custos com softwares desnecessários, a LCAI foca em ferramentas de alto ROI e dados precisos para sua escala.</p>
         <div className="grid grid-cols-2 gap-6">
           <div className="p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
             <div className="text-4xl font-black text-blue-500 mb-1">R$ 0,001</div>
@@ -27,12 +27,12 @@ const Stats: React.FC = () => {
             <div className="text-sm text-slate-400">Recuperação de Carrinho</div>
           </div>
           <div className="p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
-            <div className="text-4xl font-black text-purple-500 mb-1">100%</div>
-            <div className="text-sm text-slate-400">Infraestrutura Própria</div>
+            <div className="text-4xl font-black text-purple-500 mb-1">ROI</div>
+            <div className="text-sm text-slate-400">Foco em Decisão Baseada em Dados</div>
           </div>
           <div className="p-6 rounded-2xl bg-slate-900/50 border border-slate-800">
-            <div className="text-4xl font-black text-orange-500 mb-1">0% Churn</div>
-            <div className="text-sm text-slate-400">Gestão de Comunidade</div>
+            <div className="text-4xl font-black text-orange-500 mb-1">Scale</div>
+            <div className="text-sm text-slate-400">Gestão de Inteligência de Vendas</div>
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@ const Stats: React.FC = () => {
             <Bar dataKey="custo" stackId="a" fill="#1e293b" radius={[0, 0, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
-        <p className="text-xs text-slate-500 mt-4 text-center italic">Cálculo de margem real após otimização de infraestrutura LCAI.</p>
+        <p className="text-xs text-slate-500 mt-4 text-center italic">Cálculo de margem real após otimização de ferramentas e processos LCAI.</p>
       </div>
     </div>
   );
