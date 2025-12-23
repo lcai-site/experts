@@ -1,111 +1,141 @@
 
 import React, { useState } from 'react';
-import { getDigitalDiagnostic } from '../services/gemini.ts';
-import { DiagnosticResult } from '../types.ts';
 
 const AIDiagnostic: React.FC = () => {
-  const [niche, setNiche] = useState('');
-  const [audience, setAudience] = useState('');
-  const [status, setStatus] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [operation, setOperation] = useState('');
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<DiagnosticResult | null>(null);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+
+    const payload = {
+      name,
+      email,
+      phone,
+      operation,
+      timestamp: new Date().toISOString(),
+      source: 'LCAI Form Site'
+    };
+
     try {
-      const diag = await getDigitalDiagnostic(niche, audience, status);
-      setResult(diag);
+      const response = await fetch('https://n8n.lcai.com.br/webhook/formsite', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        throw new Error('Erro no servidor');
+      }
     } catch (err) {
-      alert('Erro ao gerar diagnóstico. Tente novamente.');
+      console.error('Submission error:', err);
+      alert('Ocorreu um erro ao enviar seus dados. Por favor, tente novamente ou entre em contato via WhatsApp.');
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="glass p-8 md:p-12 rounded-[40px]">
-      <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold mb-4">Simulação Operacional LCAI (IA)</h2>
-        <p className="text-slate-400">Descubra em segundos qual a melhor estrutura operacional para o seu momento atual.</p>
-      </div>
+    <div className="glass p-8 md:p-12 rounded-[40px] border-white/10 shadow-2xl relative overflow-hidden">
+      {!submitted ? (
+        <>
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Análise de Viabilidade Operacional</h2>
+            <p className="text-slate-400">Preencha os dados abaixo para que nosso time de estratégia analise sua operação.</p>
+          </div>
 
-      {!result ? (
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-slate-300 ml-1">Nome Completo</label>
+                <input 
+                  type="text" 
+                  placeholder="Como gostaria de ser chamado?"
+                  className="w-full bg-slate-900/50 border border-slate-800 rounded-2xl p-4 text-white focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-slate-300 ml-1">E-mail Corporativo</label>
+                <input 
+                  type="email" 
+                  placeholder="exemplo@suaempresa.com"
+                  className="w-full bg-slate-900/50 border border-slate-800 rounded-2xl p-4 text-white focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+            </div>
+
             <div className="space-y-2">
-              <label className="text-sm font-medium text-slate-300">Seu Nicho</label>
+              <label className="text-sm font-medium text-slate-300 ml-1">WhatsApp (com DDD)</label>
               <input 
-                type="text" 
-                placeholder="Ex: Finanças, Marketing, Saúde..."
-                className="w-full bg-slate-900 border border-slate-800 rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none"
-                value={niche}
-                onChange={(e) => setNiche(e.target.value)}
+                type="tel" 
+                placeholder="(00) 00000-0000"
+                className="w-full bg-slate-900/50 border border-slate-800 rounded-2xl p-4 text-white focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
                 required
               />
             </div>
+
             <div className="space-y-2">
-              <label className="text-sm font-medium text-slate-300">Tamanho da Audiência</label>
-              <input 
-                type="text" 
-                placeholder="Ex: 50k Instagram, 10k Email..."
-                className="w-full bg-slate-900 border border-slate-800 rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none"
-                value={audience}
-                onChange={(e) => setAudience(e.target.value)}
+              <label className="text-sm font-medium text-slate-300 ml-1">Fale um pouco sobre sua operação atual</label>
+              <textarea 
+                rows={4}
+                placeholder="Quais produtos vende? Qual seu faturamento atual? Quais seus maiores gargalos técnicos?"
+                className="w-full bg-slate-900/50 border border-slate-800 rounded-2xl p-4 text-white focus:ring-2 focus:ring-blue-500 outline-none resize-none transition-all"
+                value={operation}
+                onChange={(e) => setOperation(e.target.value)}
                 required
               />
             </div>
-          </div>
-          <div className="space-y-2">
-            <label className="text-sm font-medium text-slate-300">Qual o seu maior gargalo hoje?</label>
-            <textarea 
-              rows={3}
-              placeholder="Ex: Não consigo dar suporte, tecnologia é confusa, checkout trava..."
-              className="w-full bg-slate-900 border border-slate-800 rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none resize-none"
-              value={status}
-              onChange={(e) => setStatus(e.target.value)}
-              required
-            />
-          </div>
-          <button 
-            disabled={loading}
-            className={`w-full py-5 rounded-2xl font-bold text-lg transition-all ${loading ? 'bg-slate-800 cursor-not-allowed' : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:scale-[1.02]'}`}
-          >
-            {loading ? 'LCAI Intelligence está processando...' : 'Gerar Meu Diagnóstico Grátis'}
-          </button>
-        </form>
+
+            <button 
+              disabled={loading}
+              className={`w-full py-5 rounded-2xl font-bold text-lg transition-all transform active:scale-95 flex items-center justify-center gap-3 ${loading ? 'bg-slate-800 cursor-not-allowed text-slate-500' : 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:shadow-lg hover:shadow-blue-500/20'}`}
+            >
+              {loading ? (
+                <>
+                  <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Enviando dados...
+                </>
+              ) : 'Solicitar Diagnóstico Estratégico'}
+            </button>
+            <p className="text-center text-[10px] text-slate-500 uppercase tracking-widest">Seus dados estão protegidos pela nossa política de privacidade</p>
+          </form>
+        </>
       ) : (
-        <div className="space-y-8 animate-fadeIn">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-2xl bg-blue-500/10 border border-blue-500/20">
-              <h4 className="text-blue-400 text-xs font-bold uppercase mb-2">Estratégia Recomendada</h4>
-              <p className="text-xl font-bold">{result.strategy}</p>
-            </div>
-            <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800">
-              <h4 className="text-slate-500 text-xs font-bold uppercase mb-2">Funil de Vendas</h4>
-              <p className="text-xl font-bold">{result.suggestedFunnel}</p>
-            </div>
-            <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800">
-              <h4 className="text-slate-500 text-xs font-bold uppercase mb-2">Complexidade de Gestão</h4>
-              <p className="text-xl font-bold">{result.operationalComplexity}</p>
-            </div>
-            <div className="p-6 rounded-2xl bg-green-500/10 border border-green-500/20">
-              <h4 className="text-green-400 text-xs font-bold uppercase mb-2">ROI Potencial</h4>
-              <p className="text-xl font-bold">{result.potentialROI}</p>
-            </div>
+        <div className="text-center py-10 animate-fadeIn">
+          <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-green-500/50">
+            <svg className="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+            </svg>
           </div>
-          
-          <div className="bg-slate-900/50 p-6 rounded-2xl border border-slate-800">
-            <p className="text-slate-400 text-sm italic">
-              Este é um diagnóstico preliminar gerado pela nossa IA. Para uma análise técnica completa de infraestrutura, agende uma reunião com nossos engenheiros de operação.
-            </p>
-          </div>
-
+          <h2 className="text-3xl font-bold mb-4 text-white">Dados Recebidos com Sucesso!</h2>
+          <p className="text-slate-400 text-lg mb-8 max-w-md mx-auto">
+            Nossa equipe de estratégia já foi notificada. Em breve um consultor da LCAI entrará em contato via WhatsApp para agendar sua análise técnica.
+          </p>
           <button 
-            onClick={() => setResult(null)}
-            className="w-full py-4 glass text-sm font-bold rounded-xl"
+            onClick={() => setSubmitted(false)}
+            className="px-8 py-3 glass rounded-xl text-sm font-bold text-white hover:bg-slate-800 transition-all"
           >
-            Novo Diagnóstico
+            Voltar ao Início
           </button>
         </div>
       )}

@@ -1,5 +1,4 @@
 
-// Add React import to resolve the React namespace error
 import React from 'react';
 
 export interface ServiceCardProps {
@@ -21,4 +20,5 @@ export interface DiagnosticResult {
   suggestedFunnel: string;
   operationalComplexity: string;
   potentialROI: string;
+  productStaircase: string; // Nova propriedade para o diagnóstico
 }

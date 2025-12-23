@@ -3,27 +3,39 @@ import React from 'react';
 
 const coreServices = [
   {
-    title: "E-mail Marketing de Elite",
-    tag: "Menor Custo",
-    description: "Infraestrutura própria ou otimizada que reduz seus custos fixos em até 70% comparado a ActiveCampaign ou Mailchimp.",
+    title: "Desenvolvimento de Produtos",
+    tag: "Product Ops",
+    description: "Estruturamos seu conhecimento em produtos digitais valiosos, da grade curricular à experiência do aluno em plataformas gamificadas.",
+    icon: "💎"
+  },
+  {
+    title: "Copywriting de Elite",
+    tag: "Conversão",
+    description: "Vendas através de palavras. Criamos VSLs, páginas de alta conversão e anúncios que tocam na dor e desejo do seu público.",
+    icon: "✍️"
+  },
+  {
+    title: "Engenharia de Esteira",
+    tag: "LTV Focus",
+    description: "Construímos a jornada completa: do produto de entrada (order bump) até o High Ticket, maximizando o lucro por cliente.",
+    icon: "🪜"
+  },
+  {
+    title: "E-mail Marketing",
+    tag: "Custo-Benefício",
+    description: "Infraestrutura própria que reduz seus custos fixos em até 70%, mantendo entregabilidade máxima nas caixas de entrada.",
     icon: "📧"
   },
   {
-    title: "Recuperação de Vendas",
-    tag: "Automatic",
-    description: "Sistemas inteligentes de recuperação de carrinho, Pix e Boletos via WhatsApp e E-mail com comunicação personalizada.",
+    title: "Recuperação Ativa",
+    tag: "Performance",
+    description: "Sistemas inteligentes de recuperação de vendas abandonadas via WhatsApp e E-mail, rodando 24/7 para você.",
     icon: "💸"
   },
   {
-    title: "Comunicação Ativa",
-    tag: "Engajamento",
-    description: "Gestão completa da comunicação com leads. Réguas de relacionamento automáticas que vendem sem esforço extra.",
-    icon: "🗣️"
-  },
-  {
     title: "Gestão de Comunidades",
-    tag: "LTV Focus",
-    description: "Nós cuidamos da infraestrutura e moderação da sua área de membros e grupos, garantindo retenção e novas vendas.",
+    tag: "Retenção",
+    description: "Moderação e infraestrutura para áreas de membros e grupos, garantindo que o expert foque apenas em entregar conteúdo.",
     icon: "🤝"
   }
 ];
@@ -32,20 +44,27 @@ const OperationalCore: React.FC = () => {
   return (
     <div>
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold mb-4">O Coração da sua Operação</h2>
-        <p className="text-slate-400 text-lg">Tecnologia de ponta focada no que importa: <span className="text-blue-400 font-bold">Lucro Líquido.</span></p>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">Engenharia de Vendas Completa</h2>
+        <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+          Unimos estratégia de produto, copy persuasiva e tecnologia de baixo custo para criar operações de <span className="text-blue-400 font-bold">Alta Performance.</span>
+        </p>
       </div>
       
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {coreServices.map((service, index) => (
-          <div key={index} className="p-8 rounded-3xl glass border-white/5 hover:border-blue-500/30 transition-all group">
+          <div key={index} className="p-8 rounded-3xl glass border-white/5 hover:border-blue-500/30 transition-all group relative overflow-hidden">
+            <div className="absolute -right-4 -top-4 text-6xl opacity-10 group-hover:opacity-20 transition-opacity">
+              {service.icon}
+            </div>
             <div className="text-4xl mb-6 group-hover:scale-110 transition-transform inline-block">
               {service.icon}
             </div>
-            <div className="inline-block px-2 py-1 rounded bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase mb-4 tracking-wider">
-              {service.tag}
+            <div className="block">
+              <span className="inline-block px-2 py-1 rounded bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase mb-4 tracking-wider">
+                {service.tag}
+              </span>
             </div>
-            <h3 className="text-xl font-bold mb-4">{service.title}</h3>
+            <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
               {service.description}
             </p>

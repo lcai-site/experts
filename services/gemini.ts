@@ -20,7 +20,7 @@ export const getDigitalDiagnostic = async (niche: string, audienceSize: string, 
         Tamanho da Audiência: ${audienceSize}
         Status Atual: ${currentStatus}
         
-        Atue como o time de operações da LCAI. Crie um diagnóstico operacional resumido em JSON.`,
+        Atue como o time de operações estratégicas da LCAI. Crie um diagnóstico completo focando em Esteira de Produtos, Copy e Infraestrutura. Retorne em JSON.`,
       config: {
         responseMimeType: "application/json",
         responseSchema: {
@@ -29,9 +29,10 @@ export const getDigitalDiagnostic = async (niche: string, audienceSize: string, 
             strategy: { type: Type.STRING, description: "Estratégia sugerida (ex: Escala de Low Ticket ou Mentoria High Ticket)" },
             suggestedFunnel: { type: Type.STRING, description: "Tipo de funil recomendado" },
             operationalComplexity: { type: Type.STRING, description: "Nível de suporte operacional necessário" },
-            potentialROI: { type: Type.STRING, description: "Estimativa de retorno sobre investimento operacional" }
+            potentialROI: { type: Type.STRING, description: "Estimativa de retorno sobre investimento operacional" },
+            productStaircase: { type: Type.STRING, description: "Sugestão de ordem de produtos (Low -> High)" }
           },
-          required: ["strategy", "suggestedFunnel", "operationalComplexity", "potentialROI"]
+          required: ["strategy", "suggestedFunnel", "operationalComplexity", "potentialROI", "productStaircase"]
         }
       }
     });
