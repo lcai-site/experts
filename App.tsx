@@ -8,6 +8,7 @@ import OperationalCore from './components/OperationalCore.tsx';
 import ExpertSection from './components/ExpertSection.tsx';
 import AIDiagnostic from './components/AIDiagnostic.tsx';
 import Footer from './components/Footer.tsx';
+import FloatingWhatsApp from './components/FloatingWhatsApp.tsx';
 
 const App: React.FC = () => {
   return (
@@ -56,6 +57,7 @@ const App: React.FC = () => {
         </section>
       </main>
 
+      <FloatingWhatsApp />
       <Footer />
     </div>
   );
