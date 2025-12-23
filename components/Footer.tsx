@@ -7,12 +7,15 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-2">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold">L</div>
-              <span className="text-2xl font-bold tracking-tighter">LCAI</span>
+            <div className="flex items-center mb-6">
+              <img 
+                src="https://midias.lcai.com.br/images/2025/12/20/Sem-titulo-2-1.png" 
+                alt="LCAI Logo" 
+                className="h-12 md:h-16 w-auto object-contain"
+              />
             </div>
-            <p className="text-slate-400 max-w-sm mb-8">
-              Especialistas em operações digitais de alta escala. Transformamos expertise em ativos de alto rendimento.
+            <p className="text-slate-400 max-w-sm mb-8 leading-relaxed">
+              Especialistas em operações digitais de alta escala. Transformamos expertise em ativos de alto rendimento com tecnologia própria e copy de elite.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-blue-600 transition-colors">
@@ -25,31 +28,30 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="font-bold mb-6">Operação</h4>
+            <h4 className="font-bold mb-6 text-white uppercase tracking-widest text-xs">Operação</h4>
             <ul className="space-y-4 text-slate-400 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">Lançamentos</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Funis Perpétuos</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Gestão de Checkouts</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Infraestrutura Web</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition-colors">Lançamentos</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition-colors">Funis Perpétuos</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition-colors">Gestão de Checkouts</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition-colors">Infraestrutura Web</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold mb-6">LCAI</h4>
+            <h4 className="font-bold mb-6 text-white uppercase tracking-widest text-xs">Links Úteis</h4>
             <ul className="space-y-4 text-slate-400 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">Sobre Nós</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Trabalhe Conosco</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Políticas de Privacidade</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contato</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition-colors">Expert Showcase</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition-colors">Trabalhe Conosco</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition-colors">Políticas</a></li>
+              <li><a href="https://wa.me/5519999611441" className="hover:text-blue-400 transition-colors">Contato Direto</a></li>
             </ul>
           </div>
         </div>
         
-        <div className="pt-10 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-xs">
-          <p>© 2024 LCAI. Todos os direitos reservados. Transformando expertise em impérios.</p>
+        <div className="pt-10 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-[10px] uppercase tracking-widest">
+          <p>© 2024 LCAI. Todos os direitos reservados.</p>
           <div className="flex gap-8">
-            <span>lcai.com.br</span>
-            <span>CNPJ: 00.000.000/0001-00</span>
+            <span className="text-slate-600">lcai.com.br</span>
           </div>
         </div>
       </div>
