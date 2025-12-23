@@ -1,9 +1,10 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
 import Stats from './components/Stats.tsx';
 import OperationScales from './components/OperationScales.tsx';
+import OperationalCore from './components/OperationalCore.tsx';
 import ExpertSection from './components/ExpertSection.tsx';
 import AIDiagnostic from './components/AIDiagnostic.tsx';
 import Footer from './components/Footer.tsx';
@@ -22,12 +23,19 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        <section id="operacao" className="py-24 px-4 bg-slate-900/50">
+        <section id="diferenciais" className="py-24 px-4 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-600/10 blur-[100px] rounded-full -z-10"></div>
+          <div className="max-w-7xl mx-auto">
+            <OperationalCore />
+          </div>
+        </section>
+
+        <section id="operacao" className="py-24 px-4 bg-slate-900/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Operações Full-Service</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Estrutura de Escala</h2>
               <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-                Da concepção do produto à escala global. A LCAI gerencia a complexidade para que você foque na sua genialidade.
+                Do Low ao High Ticket: operamos com a infraestrutura mais eficiente do mercado para garantir a sua margem de lucro.
               </p>
             </div>
             <OperationScales />
