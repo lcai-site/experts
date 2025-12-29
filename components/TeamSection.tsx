@@ -13,14 +13,14 @@ const TeamSection: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
-          {/* Card Especialista em Dados/Infra */}
+          {/* Card Luís Ricardo Camacho */}
           <div className="group relative">
             <div className="absolute inset-0 bg-blue-600/10 blur-[60px] rounded-full group-hover:bg-blue-600/20 transition-all"></div>
             <div className="relative glass p-4 md:p-6 rounded-[40px] border-white/5 overflow-hidden transition-all hover:scale-[1.01]">
               <div className="aspect-[4/5] overflow-hidden rounded-[32px] mb-8 relative">
                 <img 
-                  src="https://midias.lcai.com.br/images/2025/12/23/luan-placeholder.jpg" 
-                  alt="Especialista em Dados e Infraestrutura" 
+                  src="https://midias.lcai.com.br/images/2025/12/29/Design-sem-nome-8.png" 
+                  alt="Luís Ricardo Camacho" 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
@@ -29,9 +29,10 @@ const TeamSection: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
               </div>
-              <div className="px-4 pb-4">
-                <span className="text-[10px] font-black tracking-[0.3em] text-blue-400 uppercase mb-2 block">Data & Cloud Engineering</span>
-                <h3 className="text-3xl font-bold text-white mb-4">Especialista em Dados e Infraestrutura</h3>
+              <div className="px-4 pb-4 text-center md:text-left">
+                <span className="text-[10px] font-black tracking-[0.3em] text-blue-400 uppercase mb-2 block">Data & Business Strategy</span>
+                <h3 className="text-4xl font-black text-white mb-1">Luís Ricardo Camacho</h3>
+                <h4 className="text-xl font-bold text-blue-100/80 mb-4">Especialista em Dados e Estrategista Digital</h4>
                 <p className="text-slate-400 leading-relaxed text-sm italic">
                   "Minha missão é garantir que cada centavo investido seja rastreado e que a infraestrutura suporte milhões em vendas com o menor custo operacional possível."
                 </p>
@@ -39,14 +40,14 @@ const TeamSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Card Especialista em Copy/Estratégia */}
+          {/* Card Camila Nogueira Bezerra */}
           <div className="group relative">
             <div className="absolute inset-0 bg-purple-600/10 blur-[60px] rounded-full group-hover:bg-purple-600/20 transition-all"></div>
             <div className="relative glass p-4 md:p-6 rounded-[40px] border-white/5 overflow-hidden transition-all hover:scale-[1.01]">
               <div className="aspect-[4/5] overflow-hidden rounded-[32px] mb-8 relative">
                 <img 
-                  src="https://midias.lcai.com.br/images/2025/12/23/esposa-placeholder.jpg" 
-                  alt="Copywriter e Estrategista Digital" 
+                  src="https://midias.lcai.com.br/images/2025/12/29/Design-sem-nome-7.png" 
+                  alt="Camila Nogueira Bezerra" 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
@@ -55,9 +56,10 @@ const TeamSection: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
               </div>
-              <div className="px-4 pb-4">
+              <div className="px-4 pb-4 text-center md:text-left">
                 <span className="text-[10px] font-black tracking-[0.3em] text-purple-400 uppercase mb-2 block">Strategy & Copywriting</span>
-                <h3 className="text-3xl font-bold text-white mb-4">Copywriter e Estrategista Digital</h3>
+                <h3 className="text-4xl font-black text-white mb-1">Camila Nogueira Bezerra</h3>
+                <h4 className="text-xl font-bold text-purple-100/80 mb-4">Copywriter e Estrategista Digital</h4>
                 <p className="text-slate-400 leading-relaxed text-sm italic">
                   "Transformo a expertise do autor em uma mensagem magnética. Criamos narrativas que não apenas vendem, mas constroem legados e autoridade no mercado."
                 </p>

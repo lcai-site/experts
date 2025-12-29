@@ -7,7 +7,7 @@ const FloatingWhatsApp: React.FC = () => {
       href="https://wa.me/5519999611441"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 left-6 z-50 flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-lg shadow-green-500/20 transition-all hover:scale-110 active:scale-95 group animate-bounce-slow"
+      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-lg shadow-green-500/20 transition-all hover:scale-110 active:scale-95 group animate-bounce-slow"
       aria-label="Falar no WhatsApp"
     >
       <div className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20 group-hover:opacity-40"></div>
