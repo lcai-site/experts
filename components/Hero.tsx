@@ -3,44 +3,64 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative min-h-[85vh] md:min-h-[95vh] flex items-center justify-center pt-20 md:pt-24 px-6 overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-blue-500/10 rounded-full blur-[100px] md:blur-[120px] animate-pulse"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-72 h-72 md:w-96 md:h-96 bg-purple-500/10 rounded-full blur-[100px] md:blur-[120px] animate-pulse delay-1000"></div>
+    <div className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 px-6 overflow-hidden">
+      {/* Decorative Blur Elements */}
+      <div className="mesh-glow -top-48 -left-48 opacity-40"></div>
+      <div className="mesh-glow top-1/2 -right-48 opacity-30 animate-pulse"></div>
 
-      <div className="max-w-6xl mx-auto text-center relative z-10">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6 md:mb-10 animate-fadeIn">
-          <span className="flex h-2 w-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>
-          <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-blue-400">Operação Digital High-End</span>
+      <div className="max-w-7xl mx-auto text-center relative z-10">
+        <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass-bright mb-10 border border-white/10 animate-fadeIn">
+          <span className="flex h-2.5 w-2.5 rounded-full bg-blue-500 shadow-[0_0_12px_rgba(59,130,246,1)]"></span>
+          <span className="text-[11px] font-black tracking-[0.3em] uppercase text-blue-400">Sistema Proprietário de Escala</span>
         </div>
         
-        <h1 className="text-5xl md:text-9xl font-black mb-6 md:mb-8 leading-[1.1] md:leading-[0.95] tracking-tight text-white drop-shadow-2xl">
-          Sua Expertise.<br />Nosso <span className="gradient-text">Império.</span>
+        <h1 className="text-6xl md:text-[140px] font-black mb-10 leading-[0.9] tracking-tighter text-white drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+          Expertise em <br /> <span className="gradient-text">Império.</span>
         </h1>
         
-        <p className="text-base md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 md:mb-14 leading-relaxed font-medium">
-          Otimizamos 100% da sua operação: do desenvolvimento da <strong className="text-slate-200">esteira de produtos</strong> e <strong className="text-slate-200">copywriting</strong> de elite até a gestão estratégica com foco em <strong className="text-slate-200">redução de custos</strong> e dados.
+        <p className="text-lg md:text-2xl text-slate-400 max-w-4xl mx-auto mb-16 leading-relaxed font-medium">
+          Assumimos 100% da infraestrutura técnica e estratégica. <br className="hidden md:block" />
+          Focamos em <strong className="text-white">ROI real</strong>, copy de elite e engenharia de processos que trituram os custos operacionais do seu lançamento.
         </p>
         
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
-          <a href="#ai-diagnostic" className="w-full sm:w-auto px-10 md:px-12 py-4 md:py-5 glass text-xs md:text-sm font-bold rounded-2xl transition-all hover:bg-white hover:text-black uppercase tracking-widest text-white">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-24">
+          <a 
+            href="#ai-diagnostic" 
+            className="w-full sm:w-auto px-12 py-6 bg-white text-slate-950 text-sm font-black rounded-2xl transition-all hover:bg-blue-600 hover:text-white uppercase tracking-widest shadow-[0_20px_40px_-10px_rgba(255,255,255,0.2)] hover:shadow-blue-500/40 hover:-translate-y-1"
+          >
             Preencher Diagnóstico
           </a>
           <a 
             href="https://wa.me/5519999611441" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-10 md:px-12 py-4 md:py-5 bg-blue-600 hover:bg-blue-500 text-xs md:text-sm font-bold rounded-2xl shadow-2xl shadow-blue-500/20 transition-all hover:-translate-y-1 uppercase tracking-widest text-white"
+            className="w-full sm:w-auto px-12 py-6 glass-bright text-sm font-black rounded-2xl transition-all hover:bg-white/10 border border-white/20 uppercase tracking-widest text-white backdrop-blur-3xl"
           >
             Falar com Estrategista
           </a>
         </div>
 
-        <div className="mt-16 md:mt-28 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 opacity-40 grayscale hover:grayscale-0 transition-all items-center">
-          <div className="text-[9px] md:text-[10px] font-black tracking-[0.3em] text-slate-400 uppercase">Copywriting Elite</div>
-          <div className="text-[9px] md:text-[10px] font-black tracking-[0.3em] text-slate-400 uppercase">Esteira de LTV</div>
-          <div className="text-[9px] md:text-[10px] font-black tracking-[0.3em] text-slate-400 uppercase">Low & High Ticket</div>
-          <div className="text-[9px] md:text-[10px] font-black tracking-[0.3em] text-slate-400 uppercase">Inteligência de Dados</div>
+        {/* Proof Ribbon */}
+        <div className="mt-8 border-t border-white/5 pt-12">
+          <p className="text-[10px] text-slate-500 font-black uppercase tracking-[0.4em] mb-10">Pilares da Operação LCAI</p>
+          <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 opacity-60">
+            <div className="flex items-center gap-3 grayscale hover:grayscale-0 transition-all cursor-default group">
+              <span className="text-2xl group-hover:scale-125 transition-transform">⚡</span>
+              <span className="text-[11px] font-bold text-slate-300 uppercase tracking-widest">Infra Web Pro</span>
+            </div>
+            <div className="flex items-center gap-3 grayscale hover:grayscale-0 transition-all cursor-default group">
+              <span className="text-2xl group-hover:scale-125 transition-transform">💎</span>
+              <span className="text-[11px] font-bold text-slate-300 uppercase tracking-widest">Esteira de LTV</span>
+            </div>
+            <div className="flex items-center gap-3 grayscale hover:grayscale-0 transition-all cursor-default group">
+              <span className="text-2xl group-hover:scale-125 transition-transform">✍️</span>
+              <span className="text-[11px] font-bold text-slate-300 uppercase tracking-widest">Copywriting Elite</span>
+            </div>
+            <div className="flex items-center gap-3 grayscale hover:grayscale-0 transition-all cursor-default group">
+              <span className="text-2xl group-hover:scale-125 transition-transform">📊</span>
+              <span className="text-[11px] font-bold text-slate-300 uppercase tracking-widest">Data Decisions</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

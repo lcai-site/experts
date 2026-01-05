@@ -14,26 +14,27 @@ import FloatingWhatsApp from './components/FloatingWhatsApp.tsx';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-950 overflow-x-hidden selection:bg-blue-500/30">
+    <div className="min-h-screen bg-slate-950 overflow-x-hidden selection:bg-blue-600 selection:text-white">
       <Navbar />
       
-      <main>
+      <main className="relative">
         <Hero />
         
-        <section id="stats" className="py-12 md:py-20 px-4">
+        <section id="stats" className="py-24 px-6">
           <div className="max-w-7xl mx-auto">
             <Stats />
           </div>
         </section>
 
-        <section id="diferenciais" className="py-16 md:py-24 px-4 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-600/10 blur-[100px] rounded-full -z-10"></div>
+        <section id="diferenciais" className="py-24 px-6 relative overflow-hidden">
+          {/* Background Highlight */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-indigo-600/5 blur-[150px] rounded-full -z-10 pointer-events-none"></div>
           <div className="max-w-7xl mx-auto">
             <OperationalCore />
           </div>
         </section>
 
-        <section id="lideranca" className="bg-slate-900/10">
+        <section id="lideranca" className="py-24 px-6 bg-slate-900/10">
           <TeamSection />
         </section>
 
@@ -41,11 +42,12 @@ const App: React.FC = () => {
           <SalesFunnels />
         </section>
 
-        <section id="operacao" className="py-16 md:py-24 px-4 bg-slate-900/30">
+        <section id="operacao" className="py-24 px-6 relative overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-10 md:mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Estrutura de Escala</h2>
-              <p className="text-slate-400 max-w-2xl mx-auto text-base md:text-lg">
+            <div className="text-center mb-20">
+              <span className="text-blue-500 font-black uppercase tracking-[0.4em] text-[10px] mb-4 block">Operation Mapping</span>
+              <h2 className="text-4xl md:text-7xl font-black mb-6 text-white tracking-tighter uppercase leading-none">Estrutura de Escala</h2>
+              <p className="text-slate-400 max-w-2xl mx-auto text-lg md:text-xl font-medium">
                 Do Low ao High Ticket: operamos com a infraestrutura mais eficiente do mercado para garantir a sua margem de lucro.
               </p>
             </div>
@@ -53,14 +55,13 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        <section id="experts" className="py-16 md:py-24 px-4">
+        <section id="experts" className="py-24 px-6 bg-slate-900/5">
           <div className="max-w-7xl mx-auto">
             <ExpertSection />
           </div>
         </section>
 
-        <section id="ai-diagnostic" className="py-16 md:py-24 px-4 relative overflow-hidden">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-blue-600/10 blur-[120px] rounded-full -z-10"></div>
+        <section id="ai-diagnostic" className="py-32 px-6 relative">
           <div className="max-w-4xl mx-auto">
             <AIDiagnostic />
           </div>
