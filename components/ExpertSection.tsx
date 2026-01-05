@@ -6,7 +6,7 @@ const ExpertSection: React.FC = () => {
     <div className="flex flex-col lg:flex-row gap-10 md:gap-16 items-center">
       <div className="flex-1 space-y-6 md:space-y-8 order-2 lg:order-1">
         <h2 className="text-3xl md:text-5xl font-black text-white leading-tight uppercase">
-          Case <span className="text-blue-500">Ricardo Borges</span>
+          <span className="text-blue-500">Ricardo Borges</span>
         </h2>
         <p className="text-slate-400 text-base md:text-lg leading-relaxed font-medium">
           Nossa parceria com o Expert <strong>Ricardo Borges</strong> prova que o conhecimento sólido do offline só precisa da estrutura certa para dominar o digital. Tiramos o projeto do absoluto zero, construindo os processos necessários para uma operação pronta para escalar com segurança.
@@ -39,7 +39,7 @@ const ExpertSection: React.FC = () => {
           rel="noopener noreferrer"
           className="w-full sm:w-auto bg-white text-slate-950 px-8 md:px-10 py-4 md:py-5 rounded-2xl font-black hover:bg-blue-600 hover:text-white transition-all shadow-xl shadow-white/5 inline-block text-center uppercase tracking-widest text-[10px] md:text-xs"
         >
-          Seja o próximo Case de Sucesso
+          QUERO DOMINAR O DIGITAL
         </a>
       </div>
 
@@ -61,7 +61,7 @@ const ExpertSection: React.FC = () => {
             </p>
             <div className="flex items-center gap-2">
               <span className="h-px w-6 md:w-8 bg-blue-500"></span>
-              <p className="text-[9px] md:text-xs font-black text-blue-400 uppercase tracking-widest">Ricardo Borges</p>
+              <p className="text-[9px] md:text-xs font-black text-blue-400 uppercase tracking-widest">Ricardo Borges - Mentor de carreiras</p>
             </div>
           </div>
         </div>
