@@ -1,48 +1,57 @@
 
 import React from 'react';
-import { OperationalScale } from '../types.ts';
 
-const scales: OperationalScale[] = [
+const scales = [
   {
     type: 'Low Ticket',
-    title: 'Máquina de Aquisição',
-    description: 'Produtos de entrada com checkout ultra-veloz e sistemas de recuperação instantânea (WhatsApp + E-mail).',
-    focus: ['Checkout 1-click', 'Recuperação de Pix Automática', 'Upsell Cross-Platform'],
-    metrics: 'Volume Infinito'
+    title: 'A Porta de Entrada',
+    description: 'Produtos de R$ 9 a R$ 97. O foco é aquisição em massa de leads qualificados com ROI 1:1 ou superior.',
+    features: ['Checkouts de Alta Velocidade', 'Order Bumps Estratégicos', 'Recuperação Automática'],
+    icon: "🎯",
+    color: "blue"
+  },
+  {
+    type: 'Middle Ticket',
+    title: 'A Escala de Lucro',
+    description: 'Cursos e treinamentos de R$ 297 a R$ 997. Onde a margem de lucro explode através de funis de e-mail e VSLs.',
+    features: ['VSL de Alta Conversão', 'Automação de E-mail CRM', 'Upsell em 1-Clique'],
+    icon: "📈",
+    color: "indigo"
   },
   {
     type: 'High Ticket',
-    title: 'Elite & High-Touch',
-    description: 'Mentorias de alto valor com funis de aplicação, CRM integrado e acompanhamento de vendas humano/IA.',
-    focus: ['Funil de Qualificação IA', 'Agendamento Automático', 'Gestão de Close de Vendas'],
-    metrics: 'Ticket R$ 10k+'
+    title: 'A Elite do Legado',
+    description: 'Mentorias e Masterminds de R$ 2k+. Funis de aplicação com qualificação por IA e fechamento direto.',
+    features: ['Funil de Aplicação IA', 'CRM de Vendas Integrado', 'Gestão de Close High-End'],
+    icon: "💎",
+    color: "purple"
   }
 ];
 
 const OperationScales: React.FC = () => {
   return (
-    <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    <div className="grid lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
       {scales.map((scale, i) => (
-        <div key={i} className="group relative p-8 rounded-3xl glass hover:border-blue-500/50 transition-all flex flex-col h-full">
-          <div className="absolute top-8 right-8 text-blue-500/20 group-hover:text-blue-500/40 transition-colors">
-            <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-            </svg>
+        <div key={i} className="group glass-card p-10 rounded-[40px] flex flex-col relative overflow-hidden">
+          <div className={`absolute -right-4 -top-4 w-32 h-32 bg-${scale.color}-500/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity`}></div>
+          
+          <div className="text-4xl mb-8 group-hover:scale-110 transition-transform duration-500">{scale.icon}</div>
+          
+          <div className="flex-grow">
+            <span className={`inline-block px-3 py-1 rounded-full bg-slate-800 text-blue-400 text-[10px] font-black mb-4 uppercase tracking-[0.2em] border border-white/5`}>
+              {scale.type}
+            </span>
+            <h3 className="text-2xl font-black mb-4 text-white uppercase tracking-tighter italic">{scale.title}</h3>
+            <p className="text-slate-400 text-sm leading-relaxed mb-8">
+              {scale.description}
+            </p>
           </div>
-          <span className="inline-block px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold mb-4 w-fit">
-            {scale.type}
-          </span>
-          <h3 className="text-2xl font-bold mb-4">{scale.title}</h3>
-          <p className="text-slate-400 mb-6 text-sm leading-relaxed flex-grow">
-            {scale.description}
-          </p>
-          <ul className="space-y-3">
-            {scale.focus.map((item, j) => (
-              <li key={j} className="flex items-center gap-2 text-sm text-slate-300">
-                <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                {item}
+
+          <ul className="space-y-4 pt-8 border-t border-white/5">
+            {scale.features.map((feature, j) => (
+              <li key={j} className="flex items-center gap-3 text-xs font-bold text-slate-300">
+                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_#3b82f6]"></div>
+                {feature}
               </li>
             ))}
           </ul>

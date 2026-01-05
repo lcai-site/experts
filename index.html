@@ -4,19 +4,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LCAI - Operações Digitais High-End</title>
+    <title>LCAI - Engenharia de Vendas Automáticas</title>
     <link rel="icon" type="image/png" href="https://midias.lcai.com.br/images/2025/10/29/Favicon-LCAI.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
       :root {
         --primary: #3b82f6;
-        --accent: #8b5cf6;
+        --accent: #6366f1;
       }
       body {
         font-family: 'Inter', sans-serif;
         background-color: #020617;
-        color: #f8fafc;
+        color: #f1f5f9;
         margin: 0;
         opacity: 0;
         transition: opacity 0.5s ease-in;
@@ -30,62 +30,54 @@
         letter-spacing: -0.04em;
       }
       .glass {
-        background: rgba(15, 23, 42, 0.6);
-        backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-      }
-      .glass-bright {
-        background: rgba(255, 255, 255, 0.03);
+        background: rgba(15, 23, 42, 0.4);
         backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .glass-card {
+        background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.6) 100%);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .glass-card:hover {
+        border-color: rgba(59, 130, 246, 0.4);
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
       }
       .gradient-text {
-        background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+        background: linear-gradient(135deg, #fff 30%, #93c5fd 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-      .glow-blue {
-        box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+      .bg-mesh {
+        background-image: 
+          radial-gradient(at 0% 0%, hsla(217,100%,15%,0.5) 0, transparent 50%), 
+          radial-gradient(at 100% 100%, hsla(222,47%,10%,0.5) 0, transparent 50%),
+          radial-gradient(at 50% 50%, hsla(242,100%,5%,0.2) 0, transparent 50%);
+        background-attachment: fixed;
       }
-      .mesh-bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -20;
-        background: 
-          radial-gradient(at 0% 0%, hsla(217,100%,7%,1) 0, transparent 50%), 
-          radial-gradient(at 50% 0%, hsla(222,47%,11%,1) 0, transparent 50%), 
-          radial-gradient(at 100% 0%, hsla(242,100%,5%,1) 0, transparent 50%);
-      }
-      .mesh-glow {
+      .glow-blob {
         position: absolute;
-        width: 600px;
-        height: 600px;
+        width: 500px;
+        height: 500px;
         background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
-        filter: blur(60px);
+        filter: blur(80px);
         pointer-events: none;
-        z-index: -10;
+        z-index: -1;
       }
-      @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-20px); }
+      @keyframes slow-spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
       }
-      .animate-float {
-        animation: float 6s ease-in-out infinite;
+      .animate-slow-spin {
+        animation: slow-spin 20s linear infinite;
       }
       /* Custom Scrollbar */
-      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar { width: 6px; }
       ::-webkit-scrollbar-track { background: #020617; }
       ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
       ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
-      
-      .bento-grid {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 1.5rem;
-      }
     </style>
     <script>
       window.process = window.process || { env: { NODE_ENV: 'production' } };
@@ -107,8 +99,7 @@
     }
     </script>
   </head>
-  <body>
-    <div class="mesh-bg"></div>
+  <body class="bg-mesh">
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
   </body>
