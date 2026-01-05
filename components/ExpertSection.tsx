@@ -55,10 +55,10 @@ const ExpertSection: React.FC = () => {
                target.src = "https://picsum.photos/seed/expert/800/1000";
             }}
           />
-          {/* Legend container optimized for mobile visibility */}
+          {/* Legend container optimized for visibility and containing full copy as requested */}
           <div className="absolute bottom-3 md:bottom-10 left-3 md:left-6 right-3 md:right-6 glass p-3 md:p-6 rounded-2xl md:rounded-3xl border-white/10 backdrop-blur-2xl animate-fadeIn">
             <p className="text-[10px] md:text-sm font-semibold mb-1.5 md:mb-3 italic text-white leading-tight md:leading-relaxed">
-              "Eu tinha o conhecimento, mas não sabia como transformá-lo em um negócio digital. A equipe trouxe a estrutura que eu nem sabia que precisava. O céu é o limite!"
+              "Eu tinha o conhecimento, mas não sabia como transformá-lo em um negócio digital. A equipe trouxe a estrutura que eu nem sabia que precisava. Estamos no início, mas com a base que montamos, já vejo que o céu é o limite para o que vamos alcançar!"
             </p>
             <div className="flex items-center gap-2">
               <span className="h-px w-4 md:w-8 bg-blue-500"></span>
