@@ -39,7 +39,7 @@ const Stats: React.FC = () => {
       
       <div className="glass p-8 rounded-3xl h-[450px]">
         <div className="flex justify-between items-center mb-8">
-          <h3 className="text-lg font-bold">Crescimento de Lucro (LCAI)</h3>
+          <h3 className="text-lg font-bold">Crescimento Escalável</h3>
           <div className="flex gap-4 text-[10px] uppercase font-bold tracking-widest">
             <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-blue-500"></span> Lucro Mensal</span>
           </div>

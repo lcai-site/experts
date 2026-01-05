@@ -5,6 +5,7 @@ import Hero from './components/Hero.tsx';
 import Stats from './components/Stats.tsx';
 import OperationScales from './components/OperationScales.tsx';
 import OperationalCore from './components/OperationalCore.tsx';
+import SalesFunnels from './components/SalesFunnels.tsx';
 import ExpertSection from './components/ExpertSection.tsx';
 import TeamSection from './components/TeamSection.tsx';
 import AIDiagnostic from './components/AIDiagnostic.tsx';
@@ -34,6 +35,10 @@ const App: React.FC = () => {
 
         <section id="lideranca" className="bg-slate-900/10">
           <TeamSection />
+        </section>
+
+        <section id="funis">
+          <SalesFunnels />
         </section>
 
         <section id="operacao" className="py-16 md:py-24 px-4 bg-slate-900/30">

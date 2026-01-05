@@ -16,19 +16,12 @@ const scales: OperationalScale[] = [
     description: 'Mentorias de alto valor com funis de aplicação, CRM integrado e acompanhamento de vendas humano/IA.',
     focus: ['Funil de Qualificação IA', 'Agendamento Automático', 'Gestão de Close de Vendas'],
     metrics: 'Ticket R$ 10k+'
-  },
-  {
-    type: 'Continuity',
-    title: 'Comunidades & LTV',
-    description: 'Estrutura completa de recorrência. Nós gerenciamos a tecnologia para você focar no conteúdo.',
-    focus: ['Área de Membros Gamificada', 'Moderação de Comunidades', 'Recuperação de Assinatura'],
-    metrics: 'Churn Mínimo'
   }
 ];
 
 const OperationScales: React.FC = () => {
   return (
-    <div className="grid md:grid-cols-3 gap-8">
+    <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
       {scales.map((scale, i) => (
         <div key={i} className="group relative p-8 rounded-3xl glass hover:border-blue-500/50 transition-all flex flex-col h-full">
           <div className="absolute top-8 right-8 text-blue-500/20 group-hover:text-blue-500/40 transition-colors">
@@ -43,7 +36,7 @@ const OperationScales: React.FC = () => {
           <p className="text-slate-400 mb-6 text-sm leading-relaxed flex-grow">
             {scale.description}
           </p>
-          <ul className="space-y-3 mb-8">
+          <ul className="space-y-3">
             {scale.focus.map((item, j) => (
               <li key={j} className="flex items-center gap-2 text-sm text-slate-300">
                 <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
@@ -53,10 +46,6 @@ const OperationScales: React.FC = () => {
               </li>
             ))}
           </ul>
-          <div className="pt-6 border-t border-slate-800">
-            <div className="text-xs text-slate-500 uppercase tracking-wider mb-1">Meta Operacional</div>
-            <div className="text-lg font-bold text-blue-400">{scale.metrics}</div>
-          </div>
         </div>
       ))}
     </div>
