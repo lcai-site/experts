@@ -45,23 +45,24 @@ const ExpertSection: React.FC = () => {
 
       <div className="flex-1 relative w-full order-1 lg:order-2">
         <div className="absolute inset-0 bg-blue-600/20 blur-[80px] md:blur-[100px] rounded-full"></div>
-        <div className="relative glass p-2 rounded-[32px] md:rounded-[40px] transform hover:scale-[1.01] transition-all duration-700 shadow-2xl overflow-hidden">
+        <div className="relative glass p-1.5 md:p-2 rounded-[32px] md:rounded-[40px] transform hover:scale-[1.01] transition-all duration-700 shadow-2xl overflow-hidden">
           <img 
             src="https://midias.lcai.com.br/images/2025/12/23/foto-45-1.jpg" 
             alt="Ricardo Borges Expert" 
-            className="rounded-[28px] md:rounded-[32px] w-full h-[400px] md:h-[600px] object-cover object-top"
+            className="rounded-[26px] md:rounded-[32px] w-full h-[500px] md:h-[600px] object-cover object-top"
             onError={(e) => {
                const target = e.target as HTMLImageElement;
                target.src = "https://picsum.photos/seed/expert/800/1000";
             }}
           />
-          <div className="absolute bottom-6 md:bottom-10 left-4 md:left-6 right-4 md:right-6 glass p-4 md:p-6 rounded-2xl md:rounded-3xl border-white/10 backdrop-blur-xl animate-fadeIn">
-            <p className="text-xs md:text-sm font-semibold mb-2 md:mb-3 italic text-white leading-relaxed">
-              "Eu tinha o conhecimento, mas não sabia como transformá-lo em um negócio digital. A equipe trouxe a estrutura que eu nem sabia que precisava. Estamos no início, mas com a base que montamos, já vejo que o céu é o limite para o que vamos alcançar!"
+          {/* Legend container optimized for mobile visibility */}
+          <div className="absolute bottom-3 md:bottom-10 left-3 md:left-6 right-3 md:right-6 glass p-3 md:p-6 rounded-2xl md:rounded-3xl border-white/10 backdrop-blur-2xl animate-fadeIn">
+            <p className="text-[10px] md:text-sm font-semibold mb-1.5 md:mb-3 italic text-white leading-tight md:leading-relaxed">
+              "Eu tinha o conhecimento, mas não sabia como transformá-lo em um negócio digital. A equipe trouxe a estrutura que eu nem sabia que precisava. O céu é o limite!"
             </p>
             <div className="flex items-center gap-2">
-              <span className="h-px w-6 md:w-8 bg-blue-500"></span>
-              <p className="text-[9px] md:text-xs font-black text-blue-400 uppercase tracking-widest">Ricardo Borges - Mentor de carreiras</p>
+              <span className="h-px w-4 md:w-8 bg-blue-500"></span>
+              <p className="text-[8px] md:text-xs font-black text-blue-400 uppercase tracking-widest">Ricardo Borges - Mentor de carreiras</p>
             </div>
           </div>
         </div>
