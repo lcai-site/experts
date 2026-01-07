@@ -22,20 +22,12 @@ const Hero: React.FC = () => {
           Chega de se perder em ferramentas, tags e suporte. Instalamos a <strong className="text-white">infraestrutura completa</strong> de uma operação de sete dígitos no seu negócio. Do tráfego à conversão, assumimos o operacional para você focar apenas em ser o Expert.
         </p>
         
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-24">
+        <div className="flex justify-center mb-24">
           <a 
             href="#ai-diagnostic" 
-            className="w-full sm:w-auto px-12 py-6 bg-white text-slate-950 text-sm font-black rounded-2xl transition-all hover:bg-blue-600 hover:text-white uppercase tracking-widest shadow-2xl shadow-blue-500/10 hover:-translate-y-1"
+            className="w-full sm:w-auto px-16 py-8 bg-white text-slate-950 text-base md:text-lg font-black rounded-[32px] transition-all hover:bg-blue-600 hover:text-white uppercase tracking-widest shadow-[0_20px_50px_rgba(59,130,246,0.2)] hover:-translate-y-1 active:scale-[0.98] text-center"
           >
-            Auditoria de Escalabilidade
-          </a>
-          <a 
-            href="https://wa.me/5519999611441" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="w-full sm:w-auto px-12 py-6 glass text-sm font-black rounded-2xl transition-all hover:bg-white/5 border border-white/10 uppercase tracking-widest text-white backdrop-blur-3xl"
-          >
-            Ver Demonstração do Sistema
+            Quero vender no automático!
           </a>
         </div>
 
