@@ -54,10 +54,10 @@ const AIDiagnostic: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-10">
               <div className="grid md:grid-cols-2 gap-10">
                 <div className="space-y-4">
-                  <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Seu Nome / Nome do Expert</label>
+                  <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Seu Nome</label>
                   <input 
                     type="text" 
-                    placeholder="Ex: Dr. Silva"
+                    placeholder="Seu nome completo"
                     className="w-full bg-slate-900/60 border border-white/5 rounded-2xl p-6 text-white focus:ring-2 focus:ring-blue-500 outline-none transition-all placeholder:text-slate-700"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -65,10 +65,10 @@ const AIDiagnostic: React.FC = () => {
                   />
                 </div>
                 <div className="space-y-4">
-                  <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">E-mail Profissional</label>
+                  <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">E-mail</label>
                   <input 
                     type="email" 
-                    placeholder="contato@expert.com"
+                    placeholder="seu@email.com"
                     className="w-full bg-slate-900/60 border border-white/5 rounded-2xl p-6 text-white focus:ring-2 focus:ring-blue-500 outline-none transition-all placeholder:text-slate-700"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -78,7 +78,7 @@ const AIDiagnostic: React.FC = () => {
               </div>
 
               <div className="space-y-4">
-                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">WhatsApp de Contato Direto</label>
+                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">WhatsApp com DDD</label>
                 <input 
                   type="tel" 
                   placeholder="(00) 00000-0000"
@@ -90,10 +90,10 @@ const AIDiagnostic: React.FC = () => {
               </div>
 
               <div className="space-y-4">
-                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Descreva seu Expertise e o que te impede de escalar hoje</label>
+                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-1">Conte um pouco sobre você e seu nicho de atuação</label>
                 <textarea 
                   rows={4}
-                  placeholder="Gargalos técnicos, falta de braço, cansaço de lançamentos..."
+                  placeholder="Fale brevemente sobre sua expertise e o mercado que você domina..."
                   className="w-full bg-slate-900/60 border border-white/5 rounded-2xl p-6 text-white focus:ring-2 focus:ring-blue-500 outline-none resize-none transition-all placeholder:text-slate-700"
                   value={operation}
                   onChange={(e) => setOperation(e.target.value)}
