@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LCAI - Engenharia de Vendas Automáticas</title>
+    <title>LCAI - Engenharia de Vendas Automáticas para Experts</title>
     <link rel="icon" type="image/png" href="https://midias.lcai.com.br/images/2025/10/29/Favicon-LCAI.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -27,56 +27,46 @@
       }
       h1, h2, h3, h4, .font-modern {
         font-family: 'Outfit', sans-serif;
-        letter-spacing: -0.04em;
+        letter-spacing: -0.05em;
       }
       .glass {
-        background: rgba(15, 23, 42, 0.4);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        background: rgba(15, 23, 42, 0.5);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
       }
       .glass-card {
-        background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.6) 100%);
+        background: linear-gradient(145deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.6) 100%);
         backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.05);
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
       }
       .glass-card:hover {
         border-color: rgba(59, 130, 246, 0.4);
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5);
       }
       .gradient-text {
-        background: linear-gradient(135deg, #fff 30%, #93c5fd 100%);
+        background: linear-gradient(135deg, #fff 40%, #93c5fd 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-      .bg-mesh {
-        background-image: 
-          radial-gradient(at 0% 0%, hsla(217,100%,15%,0.5) 0, transparent 50%), 
-          radial-gradient(at 100% 100%, hsla(222,47%,10%,0.5) 0, transparent 50%),
-          radial-gradient(at 50% 50%, hsla(242,100%,5%,0.2) 0, transparent 50%);
-        background-attachment: fixed;
+      .bg-grid {
+        background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+        background-size: 40px 40px;
       }
-      .glow-blob {
+      .glow-soft {
         position: absolute;
-        width: 500px;
-        height: 500px;
-        background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
-        filter: blur(80px);
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+        filter: blur(100px);
         pointer-events: none;
         z-index: -1;
       }
-      @keyframes slow-spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-      .animate-slow-spin {
-        animation: slow-spin 20s linear infinite;
-      }
       /* Custom Scrollbar */
-      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar { width: 5px; }
       ::-webkit-scrollbar-track { background: #020617; }
-      ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
       ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
     </style>
     <script>
@@ -99,7 +89,7 @@
     }
     </script>
   </head>
-  <body class="bg-mesh">
+  <body class="bg-grid">
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
   </body>
