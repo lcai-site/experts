@@ -46,8 +46,8 @@ const App: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-20">
               <span className="text-blue-500 font-black uppercase tracking-[0.4em] text-[10px] mb-4 block">Operation Mapping</span>
-              <h2 className="text-4xl md:text-7xl font-black mb-6 text-white tracking-tighter uppercase leading-none">Estrutura de Escala</h2>
-              <p className="text-slate-400 max-w-2xl mx-auto text-lg md:text-xl font-medium">
+              <h2 className="text-3xl md:text-7xl font-black mb-6 text-white tracking-tighter uppercase leading-none">Estrutura de Escala</h2>
+              <p className="text-slate-400 max-w-2xl mx-auto text-base md:text-xl font-medium">
                 Do Low ao High Ticket: operamos com a infraestrutura mais eficiente do mercado para garantir a sua margem de lucro.
               </p>
             </div>

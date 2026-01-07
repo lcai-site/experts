@@ -6,13 +6,13 @@ const TeamSection: React.FC = () => {
     <div className="py-16 md:py-24 px-4 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10 md:mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">Liderança Especializada</h2>
-          <p className="text-slate-400 text-base md:text-lg max-w-2xl mx-auto font-medium leading-relaxed">
+          <h2 className="text-2xl md:text-5xl font-bold mb-4 text-white">Liderança Especializada</h2>
+          <p className="text-slate-400 text-sm md:text-lg max-w-2xl mx-auto font-medium leading-relaxed">
             Engenharia de dados e persuasão estratégica para construir operações inabaláveis.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
           {/* Card Luís Ricardo Camacho */}
           <div className="group relative">
             <div className="absolute inset-0 bg-blue-600/10 blur-[40px] md:blur-[60px] rounded-full group-hover:bg-blue-600/20 transition-all"></div>
@@ -31,9 +31,9 @@ const TeamSection: React.FC = () => {
               </div>
               <div className="px-2 md:px-4 pb-4 text-center md:text-left">
                 <span className="text-[9px] md:text-[10px] font-black tracking-[0.3em] text-blue-400 uppercase mb-2 block">Data & Business Strategy</span>
-                <h3 className="text-2xl md:text-4xl font-black text-white mb-1">Luís Ricardo Camacho</h3>
-                <h4 className="text-base md:text-xl font-bold text-blue-100/80 mb-3 md:mb-4">Estrategista de Dados</h4>
-                <p className="text-slate-400 leading-relaxed text-xs md:text-sm italic">
+                <h3 className="text-xl md:text-4xl font-black text-white mb-1">Luís Ricardo Camacho</h3>
+                <h4 className="text-sm md:text-xl font-bold text-blue-100/80 mb-3 md:mb-4">Estrategista de Dados</h4>
+                <p className="text-slate-400 leading-relaxed text-[10px] md:text-sm italic">
                   "Garantimos que cada centavo seja rastreado e que a infraestrutura suporte milhões com o menor custo."
                 </p>
               </div>
@@ -58,9 +58,9 @@ const TeamSection: React.FC = () => {
               </div>
               <div className="px-2 md:px-4 pb-4 text-center md:text-left">
                 <span className="text-[9px] md:text-[10px] font-black tracking-[0.3em] text-purple-400 uppercase mb-2 block">Strategy & Copywriting</span>
-                <h3 className="text-2xl md:text-4xl font-black text-white mb-1">Camila Nogueira Bezerra</h3>
-                <h4 className="text-base md:text-xl font-bold text-purple-100/80 mb-3 md:mb-4">Estrategista de Copy</h4>
-                <p className="text-slate-400 leading-relaxed text-xs md:text-sm italic">
+                <h3 className="text-xl md:text-4xl font-black text-white mb-1">Camila Nogueira Bezerra</h3>
+                <h4 className="text-sm md:text-xl font-bold text-purple-100/80 mb-3 md:mb-4">Estrategista de Copy</h4>
+                <p className="text-slate-400 leading-relaxed text-[10px] md:text-sm italic">
                   "Transformo expertise em mensagens magnéticas que constroem legados e vendem."
                 </p>
               </div>

@@ -37,8 +37,8 @@ const OperationalCore: React.FC = () => {
     <div className="py-20">
       <div className="text-center mb-24">
         <span className="text-blue-500 font-black uppercase tracking-[0.4em] text-[10px] mb-4 block">A Solução Definitiva</span>
-        <h2 className="text-4xl md:text-7xl font-black mb-8 text-white uppercase tracking-tighter">Foque no seu Domínio, <br /><span className="text-blue-500 italic">nós cuidamos do Império.</span></h2>
-        <p className="text-slate-400 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
+        <h2 className="text-3xl md:text-7xl font-black mb-8 text-white uppercase tracking-tighter">Foque no seu Domínio, <br /><span className="text-blue-500 italic">nós cuidamos do Império.</span></h2>
+        <p className="text-slate-400 text-base md:text-xl max-w-4xl mx-auto leading-relaxed">
           O maior gargalo de um expert é a execução técnica. A LCAI atua como seu <span className="text-white font-bold">CTO + Diretor de Operações</span>, instalando uma máquina de vendas automática no seu negócio.
         </p>
       </div>
@@ -60,8 +60,8 @@ const OperationalCore: React.FC = () => {
                   {service.tag}
                 </span>
               </div>
-              <h3 className="text-3xl md:text-4xl font-black mb-4 text-white tracking-tighter italic leading-none">{service.title}</h3>
-              <p className="text-slate-400 text-base leading-relaxed max-w-sm">
+              <h3 className="text-2xl md:text-4xl font-black mb-4 text-white tracking-tighter italic leading-none">{service.title}</h3>
+              <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-sm">
                 {service.description}
               </p>
             </div>

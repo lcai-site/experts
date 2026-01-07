@@ -7,22 +7,22 @@ const ExpertSection: React.FC = () => {
       <div className="flex-1 space-y-8 order-2 lg:order-1">
         <div className="space-y-2">
           <span className="text-blue-500 font-black uppercase tracking-[0.4em] text-[10px] block">Partner Showcase</span>
-          <h2 className="text-4xl md:text-6xl font-black text-white leading-none uppercase tracking-tighter italic">
+          <h2 className="text-3xl md:text-6xl font-black text-white leading-none uppercase tracking-tighter italic">
             Ricardo Borges
           </h2>
         </div>
         
-        <p className="text-slate-400 text-lg leading-relaxed font-medium">
+        <p className="text-slate-400 text-base md:text-lg leading-relaxed font-medium">
           Nossa parceria com o Expert <strong>Ricardo Borges</strong> prova que o conhecimento sólido do offline só precisa da estrutura certa para dominar o digital. Tiramos o projeto do absoluto zero, construindo os processos necessários para uma operação pronta para escalar com segurança no automático.
         </p>
         
         <div className="grid sm:grid-cols-2 gap-6">
           <div className="glass p-6 rounded-3xl border-white/5 group hover:border-blue-500/30 transition-all">
-            <h4 className="font-black text-white text-lg mb-2 uppercase tracking-tighter">Fundação Estratégica</h4>
+            <h4 className="font-black text-white text-base md:text-lg mb-2 uppercase tracking-tighter">Fundação Estratégica</h4>
             <p className="text-xs text-slate-500 leading-relaxed">Estruturação de processos e funis para quem está começando a transição para o digital.</p>
           </div>
           <div className="glass p-6 rounded-3xl border-white/5 group hover:border-blue-500/30 transition-all">
-            <h4 className="font-black text-white text-lg mb-2 uppercase tracking-tighter">Viabilidade de Escala</h4>
+            <h4 className="font-black text-white text-base md:text-lg mb-2 uppercase tracking-tighter">Viabilidade de Escala</h4>
             <p className="text-xs text-slate-500 leading-relaxed">Setup inicial focado em validação rápida e crescimento sustentável.</p>
           </div>
         </div>
@@ -43,7 +43,7 @@ const ExpertSection: React.FC = () => {
           <img 
             src="https://midias.lcai.com.br/images/2025/12/23/foto-45-1.jpg" 
             alt="Ricardo Borges Expert" 
-            className="rounded-[40px] w-full h-[550px] md:h-[650px] object-cover object-top"
+            className="rounded-[40px] w-full h-[450px] md:h-[650px] object-cover object-top"
             onError={(e) => {
                const target = e.target as HTMLImageElement;
                target.src = "https://picsum.photos/seed/expert/800/1000";

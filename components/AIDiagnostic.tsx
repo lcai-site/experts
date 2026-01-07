@@ -42,13 +42,13 @@ const AIDiagnostic: React.FC = () => {
   return (
     <div className="relative group">
       <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-[50px] blur opacity-10 group-hover:opacity-30 transition duration-1000"></div>
-      <div className="relative glass p-10 md:p-20 rounded-[48px] border-white/10 shadow-3xl overflow-hidden">
+      <div className="relative glass p-8 md:p-20 rounded-[48px] border-white/10 shadow-3xl overflow-hidden">
         {!submitted ? (
           <>
             <div className="mb-14">
               <span className="text-blue-500 font-black uppercase tracking-[0.4em] text-[10px] mb-4 block">Business Audit 1.0</span>
-              <h2 className="text-4xl md:text-6xl font-black mb-6 text-white tracking-tighter leading-tight italic uppercase">Análise de <br />Escalabilidade</h2>
-              <p className="text-slate-400 text-lg max-w-xl">Descubra onde sua operação está vazando lucro e como instalar sua máquina de perpétuo em tempo recorde.</p>
+              <h2 className="text-3xl md:text-6xl font-black mb-6 text-white tracking-tighter leading-tight italic uppercase">Análise de <br />Escalabilidade</h2>
+              <p className="text-slate-400 text-base md:text-lg max-w-xl">Descubra onde sua operação está vazando lucro e como instalar sua máquina de perpétuo em tempo recorde.</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-10">
@@ -116,8 +116,8 @@ const AIDiagnostic: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h2 className="text-5xl font-black mb-8 text-white uppercase tracking-tighter italic">Auditoria Recebida</h2>
-            <p className="text-slate-400 text-xl mb-14 max-w-lg mx-auto">
+            <h2 className="text-4xl md:text-5xl font-black mb-8 text-white uppercase tracking-tighter italic">Auditoria Recebida</h2>
+            <p className="text-slate-400 text-base md:text-xl mb-14 max-w-lg mx-auto">
               Seus dados estão sendo analisados por nosso time de engenharia operacional. Entraremos em contato via WhatsApp em breve.
             </p>
             <button 

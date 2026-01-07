@@ -13,12 +13,12 @@ const Hero: React.FC = () => {
           <span className="text-[10px] font-black tracking-[0.3em] uppercase text-blue-400">Engenharia Operacional para Experts</span>
         </div>
         
-        <h1 className="text-5xl md:text-[110px] font-black mb-10 leading-[0.85] tracking-tighter text-white">
+        <h1 className="text-4xl md:text-[110px] font-black mb-10 leading-[0.85] tracking-tighter text-white">
           VOCÊ CRIA O CONTEÚDO. <br />
           NÓS CONSTRUÍMOS <span className="text-blue-500 italic">O LUCRO.</span>
         </h1>
         
-        <p className="text-lg md:text-2xl text-slate-400 max-w-4xl mx-auto mb-16 leading-relaxed font-medium">
+        <p className="text-base md:text-2xl text-slate-400 max-w-4xl mx-auto mb-16 leading-relaxed font-medium">
           Chega de se perder em ferramentas, tags e suporte. Instalamos a <strong className="text-white">infraestrutura completa</strong> de uma operação de sete dígitos no seu negócio. Do tráfego à conversão, assumimos o operacional para você focar apenas em ser o Expert.
         </p>
         
